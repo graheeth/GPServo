@@ -1,0 +1,16 @@
+[package]
+name = "rust"
+version = "0.1.0"
+edition = "2021"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mavlink = "0.12.2"
+nalgebra = "0.32.3"
+geoutils = "0.5.1"
+rpal = "0.15.0"
+
+[profile.release]
+debug = true
