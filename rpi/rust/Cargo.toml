@@ -10,7 +10,8 @@ edition = "2021"
 mavlink = "0.12.2"
 nalgebra = "0.32.3"
 geoutils = "0.5.1"
-rpal = "0.15.0"
+rppal = "0.15.0"
+once_cell = "1.19.0"
 
 [profile.release]
 debug = true

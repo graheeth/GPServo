@@ -213,7 +213,10 @@ if let Some(current_target) = &current_target_gps_coordinate {
 
                                     // use servo control
 
-                                    pwm_control::set_servo_angles(xz_angle, yz_angle);
+                                    match pwm_control::set_servo_angles(xz_angle, yz_angle){
+                                        Result::Ok(()) => println!("Servo angles set successfully"),
+                                        Result::Err(e) => println!("Error setting servo angles: {:?}", e),
+                                    }
                                     // Uncomment below lines for debugging
                                     println!("Angles: ({}, {})", xz_angle, yz_angle);
                                     // println!("Cartesian Coordinates: ({}, {})", x_cartesian, y_cartesian);
